@@ -594,7 +594,7 @@ if __name__ == "__main__":
         bf16=True,  # use fp16=True if on V100
         
         remove_unused_columns=False,
-        train_sampling_strategy="group_by_length",
+        group_by_length=True,
         dataloader_num_workers=args.dataloader_num_workers,
         gradient_checkpointing=True,
         gradient_checkpointing_kwargs={"use_reentrant": False},

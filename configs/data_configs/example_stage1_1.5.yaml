@@ -1,30 +1,30 @@
 # Example data-config: en-cs, ja-zh; first 100 rows of each file.
 # Set REPO_ROOT to the repository root before running (paths are expanded with os.path.expandvars).
 train:
-- ${REPO_ROOT}/example_data/wmt19-24/train/wmt19_en-cs_wmt-z.csv
-- ${REPO_ROOT}/example_data/wmt19-24/train/wmt20_en-cs_wmt-z.csv
-- ${REPO_ROOT}/example_data/wmt19-24/train/wmt21.news_en-cs_wmt-z.csv
-- ${REPO_ROOT}/example_data/wmt19-24/train/wmt22_en-cs_wmt-appraise-z.csv
-- ${REPO_ROOT}/example_data/wmt19-24/train/wmt23_en-cs_da-sqm.csv
-- ${REPO_ROOT}/example_data/wmt19-24/train/wmt24_en-cs_esa.csv
-- ${REPO_ROOT}/example_data/wmt19-24/train/wmt24_ja-zh_mqm.csv
-- ${REPO_ROOT}/example_data/wmt19-24_parafs/wmt19_en-cs_wmt-z.csv
-- ${REPO_ROOT}/example_data/wmt19-24_parafs/wmt20_en-cs_wmt-z.csv
-- ${REPO_ROOT}/example_data/wmt19-24_parafs/wmt21.news_en-cs_wmt-z.csv
-- ${REPO_ROOT}/example_data/wmt19-24_parafs/wmt22_en-cs_wmt-appraise-z.csv
-- ${REPO_ROOT}/example_data/wmt19-24_parafs/wmt23_en-cs_da-sqm.csv
-- ${REPO_ROOT}/example_data/wmt19-24_parafs/wmt24_en-cs_esa.csv
-- ${REPO_ROOT}/example_data/wmt19-24_parafs/wmt24_ja-zh_mqm.csv
-- ${REPO_ROOT}/example_data/synthetic/from_wmt19-24/synth_en-cs.csv
-- ${REPO_ROOT}/example_data/synthetic/from_wmt19-24/synth_ja-zh.csv
+- ${REPO_ROOT}/example-data/wmt19-24/train/wmt19_en-cs_wmt-z.csv
+- ${REPO_ROOT}/example-data/wmt19-24/train/wmt20_en-cs_wmt-z.csv
+- ${REPO_ROOT}/example-data/wmt19-24/train/wmt21.news_en-cs_wmt-z.csv
+- ${REPO_ROOT}/example-data/wmt19-24/train/wmt22_en-cs_wmt-appraise-z.csv
+- ${REPO_ROOT}/example-data/wmt19-24/train/wmt23_en-cs_da-sqm.csv
+- ${REPO_ROOT}/example-data/wmt19-24/train/wmt24_en-cs_esa.csv
+- ${REPO_ROOT}/example-data/wmt19-24/train/wmt24_ja-zh_mqm.csv
+- ${REPO_ROOT}/example-data/wmt19-24_parafs/wmt19_en-cs_wmt-z.csv
+- ${REPO_ROOT}/example-data/wmt19-24_parafs/wmt20_en-cs_wmt-z.csv
+- ${REPO_ROOT}/example-data/wmt19-24_parafs/wmt21.news_en-cs_wmt-z.csv
+- ${REPO_ROOT}/example-data/wmt19-24_parafs/wmt22_en-cs_wmt-appraise-z.csv
+- ${REPO_ROOT}/example-data/wmt19-24_parafs/wmt23_en-cs_da-sqm.csv
+- ${REPO_ROOT}/example-data/wmt19-24_parafs/wmt24_en-cs_esa.csv
+- ${REPO_ROOT}/example-data/wmt19-24_parafs/wmt24_ja-zh_mqm.csv
+- ${REPO_ROOT}/example-data/synthetic/from_wmt19-24/synth_en-cs.csv
+- ${REPO_ROOT}/example-data/synthetic/from_wmt19-24/synth_ja-zh.csv
 dev_sent:
-- ${REPO_ROOT}/example_data/wmt19-24/dev/wmt19_en-cs_wmt-z.csv
-- ${REPO_ROOT}/example_data/wmt19-24/dev/wmt20_en-cs_wmt-z.csv
-- ${REPO_ROOT}/example_data/wmt19-24/dev/wmt21.news_en-cs_wmt-z.csv
-- ${REPO_ROOT}/example_data/wmt19-24/dev/wmt22_en-cs_wmt-appraise-z.csv
-- ${REPO_ROOT}/example_data/wmt19-24/dev/wmt23_en-cs_da-sqm.csv
-- ${REPO_ROOT}/example_data/wmt19-24/dev/wmt24_en-cs_esa.csv
-- ${REPO_ROOT}/example_data/wmt19-24/dev/wmt24_ja-zh_mqm.csv
+- ${REPO_ROOT}/example-data/wmt19-24/dev/wmt19_en-cs_wmt-z.csv
+- ${REPO_ROOT}/example-data/wmt19-24/dev/wmt20_en-cs_wmt-z.csv
+- ${REPO_ROOT}/example-data/wmt19-24/dev/wmt21.news_en-cs_wmt-z.csv
+- ${REPO_ROOT}/example-data/wmt19-24/dev/wmt22_en-cs_wmt-appraise-z.csv
+- ${REPO_ROOT}/example-data/wmt19-24/dev/wmt23_en-cs_da-sqm.csv
+- ${REPO_ROOT}/example-data/wmt19-24/dev/wmt24_en-cs_esa.csv
+- ${REPO_ROOT}/example-data/wmt19-24/dev/wmt24_ja-zh_mqm.csv
 dev_paraf:
-- ${REPO_ROOT}/example_data/wmt25/dev/wmt25_en-cs_CZ_esa-merged_dev.csv
-- ${REPO_ROOT}/example_data/wmt25/dev/wmt25_ja-zh_CN_mqm_dev.csv
+- ${REPO_ROOT}/example-data/wmt25/dev/wmt25_en-cs_CZ_esa-merged_dev.csv
+- ${REPO_ROOT}/example-data/wmt25/dev/wmt25_ja-zh_CN_mqm_dev.csv
