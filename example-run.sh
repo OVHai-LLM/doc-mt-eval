@@ -10,7 +10,7 @@ cd "$REPO_ROOT/metrics"
 OUT=test_outputs
 CFG=../configs/data_configs
 TEST_CSV=$REPO_ROOT/example-data/wmt25/dev/wmt25_en-cs_CZ_esa-merged_dev.csv
-TRAIN_ARGS="--num_train_epochs 1 --frozen_epochs 0 --warmup_steps 10 --eval_steps 50 --save_steps 50 --logging_steps 10 --report_to none --batch_size 2"
+TRAIN_ARGS="--num_train_epochs 1 --frozen_epochs 0 --warmup_steps 10 --eval_steps 50 --save_steps 50 --logging_steps 10 --report_to none --batch_size 2 --eval_batch_size 4"
 
 
 # ---------------- GemmaItXComet ----------------

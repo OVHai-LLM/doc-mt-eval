@@ -45,7 +45,7 @@ Training runs in two stages, each with its own data:
 configs/
   data_configs/          example YAML data configs (one per training stage)
   prompts/               prompt template for GemmaItXComet
-example_data/            small sample of training/dev data to test the code
+example-data/            small sample of training/dev data to test the code
 metrics/
   binarize_data_xcomet.py   tokenize data for GemmaItXComet
   binarize_data_qwen.py     tokenize data for QwenXComet
@@ -54,7 +54,7 @@ metrics/
   modules/                  model classes + layer-wise attention
   inference/inference_regression-model.py   score CSV files with a trained model
   utils/                    language names, data-config loading, training helpers
-example-run.sh                  end-to-end test on example_data (both approaches)
+example-run.sh                  end-to-end test on example-data (both approaches)
 ```
 
 ## Training data format
@@ -76,7 +76,7 @@ A data config is a YAML file listing absolute CSV paths per split. Environment v
 
 ```yaml
 train:
-  - ${REPO_ROOT}/example_data/wmt19-24/train/wmt24_en-cs_esa.csv
+  - ${REPO_ROOT}/example-data/wmt19-24/train/wmt24_en-cs_esa.csv
 dev_sent:
   - ...
 dev_paraf:
@@ -102,19 +102,13 @@ The output has three score columns: `_srcref` (use it for rows with a reference)
 
 ## Testing the code
 
-`example_data/` holds a small sample of data (2 language pairs, en-cs and ja-zh, at most 100 rows per file), including some rows without a reference:
+`example-data/` holds a small sample of data (2 language pairs, en-cs and ja-zh, at most 100 rows per file), including some rows without a reference:
 
 | | Train | Sentence-level dev | Document-level dev |
 |---|---:|---:|---:|
 | Stage 1 | 1,600 | 700 | 200 |
 | Stage 2 | 1,174 | 700 | 200 |
 
-
-## Requirements
-
-Python with `torch`, `transformers`, `datasets`, `deepspeed`, `mt_metrics_eval`, `pandas`, `scipy`, `scikit-learn`, `pyyaml` and `pycountry`. `entmax` is only needed for `--layer_transformation sparsemax`.
-
-`google/gemma-3-1b-it` is a gated model: accept its license on Hugging Face and log in (`huggingface-cli login`) before training.
 
 ## Results
 
@@ -152,7 +146,7 @@ At segment level, both our models with a reference and QwenXComet without a refe
 
 ### The 8 language pairs also present in earlier WMT editions
 
-Half of the WMT25 language pairs were new in 2025. Our models saw these pairs in training (WMT25 data), while learned baselines such as COMET22 and MetricX-25 were trained on earlier WMT editions only. For a stricter comparison, this table only averages over the 8 pairs that also appear in earlier editions:
+Half of the WMT25 language pairs were new in 2025. Our models saw these languages in training (WMT25 data), while learned baselines such as COMET22 and MetricX-25 were trained on earlier WMT editions only. While no real data leakage is present, we provide an additional result table for a stricter comparison, where we only consider the 8 language pairs that also appear in earlier editions:
 
 | Metric | SPA (system) | acc23 (segment) |
 |---|---:|---:|
@@ -178,7 +172,7 @@ Half of the WMT25 language pairs were new in 2025. Our models saw these pairs in
 | **GemmaItXComet (src)** | **0.6703** | **0.5350** |
 | xCOMET-XL (src) | 0.5759 | 0.5323 |
 
-On these pairs, QwenXComet (src_ref) is still the best metric at segment level, so its lead does not come only from the exposure to new pairs. At system level, the prompted LLMs are stronger.
+We can see that on these language pairs our metrics rank lower, however QwenXComet (src_ref) is still the best metric at segment level. Therefore, its lead does not come only from the exposure to new pairs. At system level, the prompted LLMs are stronger.
 
 Overall, these results suggest that the pre-training of decoder-only LLMs can be leveraged for downstream tasks by using them as representation extractors, without autoregressive text generation, at least for MT evaluation.
 
