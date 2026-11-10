@@ -1,0 +1,10 @@
+Evaluate the quality of this machine translation.
+
+Source ({src_lang}):
+{source}
+
+Machine translation ({tgt_lang}):
+{translation}{sep1}
+
+Reference translation ({tgt_lang}):
+{ref}{sep2}

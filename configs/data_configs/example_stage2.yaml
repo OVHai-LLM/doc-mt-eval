@@ -1,0 +1,27 @@
+# Example data-config: 100 rows for en-cs, ja-zh
+# Set REPO_ROOT to the repository root before running (paths are expanded with os.path.expandvars).
+train:
+- ${REPO_ROOT}/example_data/wmt25/train/wmt25_en-cs_CZ_esa-merged_train.csv
+- ${REPO_ROOT}/example_data/wmt25/train/wmt25_ja-zh_CN_mqm_train.csv
+- ${REPO_ROOT}/example_data/synthetic/from_wmt25/synth_en-cs_CZ.csv
+- ${REPO_ROOT}/example_data/synthetic/from_wmt25/synth_ja-zh_CN.csv
+- ${REPO_ROOT}/example_data/sent-data_refresher/synth_en-cs.csv
+- ${REPO_ROOT}/example_data/sent-data_refresher/synth_ja-zh.csv
+- ${REPO_ROOT}/example_data/sent-data_refresher/wmt19_en-cs_wmt-z.csv
+- ${REPO_ROOT}/example_data/sent-data_refresher/wmt20_en-cs_wmt-z.csv
+- ${REPO_ROOT}/example_data/sent-data_refresher/wmt21.news_en-cs_wmt-z.csv
+- ${REPO_ROOT}/example_data/sent-data_refresher/wmt22_en-cs_wmt-appraise-z.csv
+- ${REPO_ROOT}/example_data/sent-data_refresher/wmt23_en-cs_da-sqm.csv
+- ${REPO_ROOT}/example_data/sent-data_refresher/wmt24_en-cs_esa.csv
+- ${REPO_ROOT}/example_data/sent-data_refresher/wmt24_ja-zh_mqm.csv
+dev_sent:
+- ${REPO_ROOT}/example_data/wmt19-24/dev/wmt19_en-cs_wmt-z.csv
+- ${REPO_ROOT}/example_data/wmt19-24/dev/wmt20_en-cs_wmt-z.csv
+- ${REPO_ROOT}/example_data/wmt19-24/dev/wmt21.news_en-cs_wmt-z.csv
+- ${REPO_ROOT}/example_data/wmt19-24/dev/wmt22_en-cs_wmt-appraise-z.csv
+- ${REPO_ROOT}/example_data/wmt19-24/dev/wmt23_en-cs_da-sqm.csv
+- ${REPO_ROOT}/example_data/wmt19-24/dev/wmt24_en-cs_esa.csv
+- ${REPO_ROOT}/example_data/wmt19-24/dev/wmt24_ja-zh_mqm.csv
+dev_paraf:
+- ${REPO_ROOT}/example_data/wmt25/dev/wmt25_en-cs_CZ_esa-merged_dev.csv
+- ${REPO_ROOT}/example_data/wmt25/dev/wmt25_ja-zh_CN_mqm_dev.csv
